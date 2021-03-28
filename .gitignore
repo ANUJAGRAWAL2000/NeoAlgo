@@ -28,6 +28,7 @@
 *.su
 *.idb
 *.pdb
+*.mod*
 *.cmd
 .tmp_versions/
 modules.order
@@ -38,6 +39,7 @@ dkms.conf
 ### C++ ###
 
 *.slo
+*.mod
 *.smod
 *.lai
 

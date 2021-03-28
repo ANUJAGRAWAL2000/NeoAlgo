@@ -84,29 +84,6 @@ class Stack {
     return console.log("Popped out", pop);
   }
 
-  // Reverse the stack
-  reverse() {
-    if (!this.top.next) {
-      return this.top;
-    }
-
-    let top = this.top;
-    this.bottom = this.top;
-    let nextNode = top.next;
-
-    while (nextNode) {
-      const temp = nextNode.next;
-      nextNode.next = top;
-      top = nextNode;
-      nextNode = temp;
-    }
-
-    this.top.next = null;
-    this.top = top;
-
-    return this;
-  }
-
   // Display all the elements of stack
   printStackElements() {
     let currentNode = this.top;
@@ -137,7 +114,6 @@ do {
   console.log("3. Get top element of the stack".display);
   console.log("4. Check whether the stack in empty or not".insert);
   console.log("5. Pop element from the stack".delete);
-  console.log("6. Reverse the stack".display);
 
   choice = +prompt("Enter your choice - ");
 
@@ -157,7 +133,7 @@ do {
       break;
 
     case 3:
-      myStack.peek();
+      myStack.peek(value);
       break;
 
     case 4:
@@ -167,16 +143,6 @@ do {
     case 5:
       myStack.pop();
       myStack.printStackElements();
-      break;
-    
-    case 6:
-      if (myStack.length === 0) {
-        console.log("Stack is empty");
-      } else {
-        myStack.reverse();
-        myStack.printStackElements();
-      }
-  
       break;
 
     default:
@@ -189,8 +155,6 @@ do {
 
 /*
 
-> node StackLinkedList
-
 Welcome to the Stack Linked List Show
 Follow the instructions to get in the show
 0. To exit without doing anything
@@ -199,7 +163,6 @@ Follow the instructions to get in the show
 3. Get top element of stack
 4. Check whether stack in empty or not
 5. Pop element from stack
-6. Reverse the stack
 Enter your choice - 1
 Stack Elements []
 
@@ -211,35 +174,9 @@ Follow the instructions to get in the show
 3. Get top element of stack
 4. Check whether stack in empty or not
 5. Pop element from stack
-6. Reverse the stack
 Enter your choice - 2
 Enter element to push into the stack - Google
 Stack Elements [ 'Google' ]
-
-Welcome to the Stack Linked List Show
-Follow the instructions to get in the show
-0. To exit without doing anything
-1. Display the stack
-2. Push element in stack
-3. Get top element of stack
-4. Check whether stack in empty or not
-5. Pop element from stack
-6. Reverse the stack
-Enter your choice - 2
-Enter element to push into the stack - YouTube
-Stack Elements [ 'Google', 'YouTube' ]
-
-Welcome to the Stack Linked List Show
-Follow the instructions to get in the show
-0. To exit without doing anything
-1. Display the stack
-2. Push element in stack
-3. Get top element of stack
-4. Check whether stack in empty or not
-5. Pop element from stack
-6. Reverse the stack
-Enter your choice - 6
-Stack Elements [ 'YouTube', 'Google' ]
 
 */
 

@@ -41,7 +41,7 @@ class first_come_first_serve
         num=sc.nextInt();
             for(int i=0;i<num;i++)
             {
-                 System.out.println("Enter process id(Integer): ");
+                 System.out.println("Enter process id: ");
                 id=sc.nextInt();
               
                 System.out.println("Enter arrival time: ");
